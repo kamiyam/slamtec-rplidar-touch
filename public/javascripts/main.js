@@ -3,11 +3,11 @@
   const clientHeight = window.innerHeight;
 
   // コンテンツの横幅の制限
-  const contentWidth = 2000; // mm で表す
+  const contentWidth = 1500; // mm で表す
 
   // コンテンツの縦幅の制限
-  const adjustHeight = 0; // mm
-  const contentHeight = 2000; // mm
+  const adjustHeight = 470; // mm
+  const contentHeight = 1210; // mm
 
   let pointX = 0;
   let pointY = 0;
