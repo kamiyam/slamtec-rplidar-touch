@@ -1,11 +1,20 @@
 const child_process = require('child_process');
 const proc = child_process.spawn(__dirname + '/bin/rplidar/ultra_simple', ['/dev/tty.SLAB_USBtoUART']);
+
 console.log("child:" + proc.pid);
 
 proc.stdout.on('data', (data) => {
   // const foo = 'theta: 208.41 Dist: 01013.00 Q: 47';
   const target = data.toString();
-  const [,angle, distance, q] = target.match(/theta:.(\d+\.\d+).Dist:.(\d+\.\d+).Q:.(\d+)/);
+  const regex = target.match(/theta:.(\d+\.\d+).Dist:.(\d+\.\d+).Q:.(\d+)/);
+  if (regex == null) {
+    return;
+  }
+  const [,angle, distance, q] = regex;
+  if (angle == null || distance == null || q == null) {
+    return;
+  }
+
   // console.log(angle, distance, q);
   const x = distance * Math.sin(angle * (Math.PI / 180));
   const y = distance * Math.cos(angle * (Math.PI / 180));

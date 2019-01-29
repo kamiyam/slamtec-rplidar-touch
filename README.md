@@ -1,5 +1,6 @@
-# j5-MPL3115A2-demo
-Johnny-five MPL3115A socket.io demo server
+# Slamtec RPLIDAR
+プロジェクタースクリーンタッチモジュールデモ
+
 
 ## 起動
 
@@ -10,5 +11,12 @@ npm start
 
 ## Reference
 
-### Altimeter - MPL3115A2 | Johnny-five  
-http://johnny-five.io/examples/altimeter-mpl3115a2/
+### デバイス
+
+- Slamtec
+
+https://www.slamtec.com/en/Lidar/A3
+
+- RPLIDAR A2を動かすメモ
+
+https://qiita.com/nariakiiwatani/items/0386676dead09f9bbc7e
